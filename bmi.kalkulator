@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double waga = double.Parse(Console.ReadLine());
+            double wzrost = double.Parse(Console.ReadLine());
+            double bmi = waga / (Math.Pow(wzrost, 2));
+            Console.WriteLine(bmi);
+            if (bmi < 16)
+                Console.WriteLine("starvation");
+            else if (bmi >= 16 & bmi < 17)
+                Console.WriteLine("emaciation");
+            else if (bmi >= 17 & bmi < 18.5)
+                Console.WriteLine("underweight");
+            else if (bmi >= 18.5 & bmi < 25)
+                Console.WriteLine("correct value");
+            else if (bmi >= 25 & bmi < 30)
+                Console.WriteLine("overweight");
+            else if (bmi >= 30 & bmi < 35)
+                Console.WriteLine("Obesity I degree");
+            else if (bmi >= 35 & bmi < 40)
+                Console.WriteLine("2nd degree of obesity");
+            else if (bmi >= 40)
+                Console.WriteLine("extreme obesity");
+        }
+    }
+}
